@@ -1,0 +1,7 @@
+<h1>All Restaurants</h1>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <%= render partial: "restaurants/restaurant", locals: { restaurant: restaurant } %>
+  <% end %>
+</ul>
+<%= link_to "Add a New Restaurant", new_restaurant_path, class: "btn btn-primary" %>
